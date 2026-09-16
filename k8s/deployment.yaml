@@ -1,19 +1,4 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  name: counter-service
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: counter-service
-  template:
-    metadata:
-      labels:
-        app: counter-service
-    spec:
-      containers:
-      - name: counter-service
-        image: counter-service:latest
-        ports:
-        - containerPort: 5000
+metadata: {name: counter}
+spec: {replicas: 1, selector: {matchLabels: {app: counter}}, template: {metadata: {labels: {app: counter}}, spec: {containers: [{name: counter, image: counter:latest, ports: [{containerPort: 5000}]}]}}}
