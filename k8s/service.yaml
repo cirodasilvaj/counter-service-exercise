@@ -4,7 +4,6 @@ metadata:
   name: counter-service
   namespace: counter-service
 spec:
-  type: LoadBalancer
   selector:
     app: counter-service
   ports:

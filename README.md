@@ -1,20 +1,15 @@
 # Counter Service
 
-A minimal Flask counter service for DevOps / Kubernetes practice.
+A minimal Flask counter app for Kubernetes practice.
 
-## Endpoint
-
-- `GET /count` — increments and returns the current count as JSON.
-
-## Run locally
+## Run
 
 ```bash
 pip install flask
 python app.py
-curl http://localhost:5000/count
 ```
 
-## Deploy to Kubernetes
+## Deploy
 
 ```bash
 kubectl apply -f k8s/namespace.yaml
