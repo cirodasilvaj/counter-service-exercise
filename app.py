@@ -1,26 +1,14 @@
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-counter = 0
+count = 0
 
 
-@app.route("/")
-def index():
-    global counter
-    counter += 1
-    return jsonify(counter=counter)
-
-
-@app.route("/reset")
-def reset():
-    global counter
-    counter = 0
-    return jsonify(counter=counter)
-
-
-@app.route("/health")
-def health():
-    return jsonify(status="ok")
+@app.route("/count")
+def get_count():
+    global count
+    count += 1
+    return jsonify(count=count)
 
 
 if __name__ == "__main__":
